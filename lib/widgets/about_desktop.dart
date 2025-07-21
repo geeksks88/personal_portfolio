@@ -15,7 +15,7 @@ class AboutDesktop extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         // SizedBox(height: 50),
-        Container(
+        SizedBox(
           // color: Colors.black,
           child: Padding(
             padding: const EdgeInsets.only(left: 20.0),

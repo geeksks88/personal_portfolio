@@ -68,11 +68,11 @@ class MiddleDesktop extends StatelessWidget {
             children: [
               Container(
                 height:
-                    screenWidth >= 900
+                    screenWidth >= 920
                         ? screenHeight * 0.6
                         : screenHeight * 0.35,
                 width:
-                    screenWidth >= 900
+                    screenWidth >= 920
                         ? screenHeight * 0.6
                         : screenHeight * 0.35,
                 decoration: BoxDecoration(
@@ -91,7 +91,7 @@ class MiddleDesktop extends StatelessWidget {
                   // radius: screenWidth * 0.0001,
                   // radius: 46,
                   backgroundColor: Colors.black.withOpacity(0.35),
-                 backgroundImage: AssetImage("assets/sdp.png"),
+                  backgroundImage: AssetImage("assets/sdp.png"),
                 ),
               ),
             ],

@@ -11,13 +11,12 @@ import 'package:my_portfolio_main/widgets/header_desktop.dart';
 import 'package:my_portfolio_main/widgets/header_mobile.dart';
 
 class HomePage extends StatelessWidget {
-   const HomePage({super.key});
-  
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
-    final screenWidth = screenSize.width;
-    final screenHeight = screenSize.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
 
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -61,7 +60,6 @@ class HomePage extends StatelessWidget {
                       ? HeaderDesktop(
                         onNavigationTap: (int navigationIndex) {
                           //func call to handle nav.
-                          
                         },
                       )
                       : const HeaderMobile(),
