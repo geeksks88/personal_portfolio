@@ -32,7 +32,7 @@ class MiddleMobile extends StatelessWidget {
               // radius: 46,
               backgroundColor: Colors.transparent,
               backgroundImage: AssetImage(
-                "assets/DPMC.png",
+                "assets/sdp.png",
                 // fit: BoxFit.cover,
               ),
             ),

@@ -555,7 +555,7 @@ class ProjectsDesktop extends StatelessWidget {
                         color: CustomColor.raisedBg2,
                         border: Border.all(
                           width: 1.5,
-                          color: CustomColor.titleC,
+                          color: CustomColor.titleC.withOpacity(0.3),
                         ),
                         borderRadius: BorderRadius.circular(screenWidth * 0.02),
                       ),
@@ -591,7 +591,7 @@ class ProjectsDesktop extends StatelessWidget {
                         color: CustomColor.raisedBg2,
                         border: Border.all(
                           width: 1.5,
-                          color: CustomColor.titleC,
+                          color: CustomColor.titleC.withOpacity(0.3),
                         ),
                         // border: Border.all(width: 2),
                         borderRadius: BorderRadius.circular(screenWidth * 0.02),
@@ -630,7 +630,7 @@ class ProjectsDesktop extends StatelessWidget {
                         color: CustomColor.raisedBg2,
                         border: Border.all(
                           width: 1.5,
-                          color: CustomColor.titleC,
+                          color: CustomColor.titleC.withOpacity(0.3),
                         ),
                         // border: Border.all(width: 2),
                         // boxShadow: [
@@ -674,7 +674,7 @@ class ProjectsDesktop extends StatelessWidget {
                         // border: Border.all(width: 2),
                         border: Border.all(
                           width: 1.5,
-                          color: CustomColor.titleC,
+                          color: CustomColor.titleC.withOpacity(0.3),
                         ),
                         borderRadius: BorderRadius.circular(screenWidth * 0.02),
                       ),

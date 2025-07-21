@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
 // import 'package:my_portfolio_main/constants/colors.dart';
 import 'package:my_portfolio_main/styles/text_styles.dart';
-import 'package:my_portfolio_main/widgets/dis_AP.dart';
+import 'package:my_portfolio_main/widgets/dis_ap.dart';
 
 class AboutDesktop extends StatelessWidget {
   final double screenWidth;

@@ -27,7 +27,7 @@ class QoutesDesktop extends StatelessWidget {
                 child: Text(
                   "\"With great power comes great electricity bill\"",
                   style: GoogleFonts.firaCode(
-                    fontSize: screenWidth * 0.018,
+                    fontSize: screenWidth * 0.017,
                     color: CustomColor.headingC,
                     // fontSize: ,
                   ),
@@ -39,10 +39,10 @@ class QoutesDesktop extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(width: screenWidth * 0.441),
+            SizedBox(width: screenWidth * 0.442),
             Container(
-              width: screenWidth * 0.159,
-              height: 58,
+              width: screenWidth * 0.157,
+              height: 60,
               decoration: BoxDecoration(
                 border: Border(
                   left: BorderSide(
@@ -63,7 +63,7 @@ class QoutesDesktop extends StatelessWidget {
                 child: Text(
                   "- Dr. Who",
                   style: GoogleFonts.firaCode(
-                    fontSize: screenWidth * 0.018,
+                    fontSize: screenWidth * 0.017,
                     color: CustomColor.headingC,
                     // fontSize: ,
                   ),

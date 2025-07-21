@@ -55,7 +55,7 @@ class HeaderDesktop extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Sujal </>",
+                    "Sujal </ $screenWidth>",
                     style: TextStyles(screenWidth: screenWidth).nameD,
                   ),
                   Row(
