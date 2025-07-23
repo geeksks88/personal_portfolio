@@ -1,9 +1,12 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio_main/constants/colors.dart';
 import 'package:my_portfolio_main/styles/text_styles.dart';
 import 'package:my_portfolio_main/widgets/about_desktop.dart';
 import 'package:my_portfolio_main/widgets/contact_desktop.dart';
+import 'package:my_portfolio_main/widgets/footer_desktop.dart';
 import 'package:my_portfolio_main/widgets/middle_desktop.dart';
 import 'package:my_portfolio_main/widgets/projects_desktop.dart';
 import 'package:my_portfolio_main/widgets/qoutes.dart';
@@ -35,10 +38,11 @@ class HeaderDesktop extends StatelessWidget {
           border: Border.symmetric(
             vertical: BorderSide(
               width: 0.5,
+
               color: CustomColor.headingC.withOpacity(0.5),
             ),
           ),
-          color: Colors.black.withOpacity(0.3),
+          color: Colors.black.withOpacity(0.6),
         ),
         child: Column(
           children: [
@@ -55,7 +59,7 @@ class HeaderDesktop extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Sujal </ $screenWidth>",
+                    "Sujal </>",
                     style: TextStyles(screenWidth: screenWidth).nameD,
                   ),
                   Row(
@@ -196,6 +200,12 @@ class HeaderDesktop extends StatelessWidget {
                     SizedBox(height: screenHeight * 0.28),
                     ContactDesktop(
                       key: navigationKeys[4],
+                      screenWidth: screenWidth,
+                      screenHeight: screenHeight,
+                    ),
+                    // SizedBox(height: screenHeight * 0.28),
+                    FooterDesktop(
+                      // key: navigationKeys[4],
                       screenWidth: screenWidth,
                       screenHeight: screenHeight,
                     ),

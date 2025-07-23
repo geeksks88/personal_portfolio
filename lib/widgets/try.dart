@@ -17,6 +17,7 @@ class _HoverRotatingCircleListState extends State<HoverRotatingCircleList> {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
+    final double screenHeight = MediaQuery.of(context).size.height;
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -46,46 +47,31 @@ class _HoverRotatingCircleListState extends State<HoverRotatingCircleList> {
           children: [
             Tooltip(
               message: "Flutter",
-              child: Image.asset(
-                "assets/flutter.png",
-                scale: screenWidth * 0.0004,
-              ),
+              child: Image.asset("assets/f.png", scale: screenWidth * 0.004),
             ),
             Tooltip(
               message: "Firebase",
-              child: Image.asset(
-                "assets/fireB.png",
-                scale: screenWidth * 0.0004,
-              ),
+              child: Image.asset("assets/fir.png", scale: screenWidth * 0.004),
             ),
             Tooltip(
               message: "Canva",
-              child: Image.asset(
-                "assets/canva.png",
-                scale: screenWidth * 0.0006,
-              ),
+              child: Image.asset("assets/ca.png", scale: screenWidth * 0.004),
             ),
             Tooltip(
               message: "Figma",
-              child: Image.asset(
-                "assets/figma.png",
-                scale: screenWidth * 0.0004,
-              ),
+              child: Image.asset("assets/fi.png", scale: screenWidth * 0.004),
             ),
             Tooltip(
               message: "Sqlite",
               child: Image.asset(
                 "assets/sqlite.png",
                 color: Colors.white,
-                scale: screenWidth * 0.0004,
+                scale: screenHeight * 0.001,
               ),
             ),
             Tooltip(
               message: "VS Code",
-              child: Image.asset(
-                "assets/vsc2.png",
-                scale: screenWidth * 0.0004,
-              ),
+              child: Image.asset("assets/vsc2.png", scale: screenWidth * 0.004),
             ),
           ],
         ),
@@ -115,20 +101,20 @@ class _HoverRotatingCircleListState extends State<HoverRotatingCircleList> {
           children: [
             Tooltip(
               message: "Dart",
-              child: Image.asset("assets/drt.png", scale: screenWidth * 0.005),
+              child: Image.asset("assets/drt.png", scale: screenWidth * 0.0045),
             ),
 
             Tooltip(
               message: "C",
-              child: Image.asset("assets/3.png", scale: screenWidth * 0.005),
+              child: Image.asset("assets/3.png", scale: screenWidth * 0.0045),
             ),
             Tooltip(
               message: "Cpp",
-              child: Image.asset("assets/4.png", scale: screenWidth * 0.005),
+              child: Image.asset("assets/4.png", scale: screenWidth * 0.004),
             ),
             Tooltip(
               message: "Python",
-              child: Image.asset("assets/5.png", scale: screenWidth * 0.005),
+              child: Image.asset("assets/5.png", scale: screenWidth * 0.004),
             ),
           ],
         ),

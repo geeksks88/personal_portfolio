@@ -1,5 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 import 'package:my_portfolio_main/constants/colors.dart';
 import 'package:my_portfolio_main/styles/text_styles.dart';
 
@@ -29,7 +31,7 @@ class MiddleDesktop extends StatelessWidget {
               ),
               Text(
                 "I'm Sujal",
-                style: TextStyles(screenWidth: screenWidth * 1.5).introS,
+                style: TextStyles(screenWidth: screenWidth * 1.3).introS,
               ),
               Row(
                 children: [
@@ -58,11 +60,59 @@ class MiddleDesktop extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(height: screenHeight * 0.02),
+              Row(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStateProperty.all(
+                        Colors.transparent,
+                      ),
+                      shape: WidgetStateProperty.all(
+                        RoundedRectangleBorder(
+                          side: BorderSide(width: 1, color: CustomColor.hassC),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(screenHeight * 0.015),
+                            bottomRight: Radius.circular(screenHeight * 0.015),
+                          ),
+                        ),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        top: screenHeight * 0.016,
+                        bottom: screenHeight * 0.016,
+                        left: screenWidth * 0.0046,
+                        right: screenWidth * 0.0046,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Resume",
+                            style: GoogleFonts.firaCode(
+                              fontSize: screenWidth * 0.016,
+                              color: CustomColor.hassC,
+                            ),
+                          ),
+                          SizedBox(width: screenWidth * 0.02),
+                          Icon(
+                            Icons.download_outlined,
+                            color: CustomColor.hassC,
+                            size: screenWidth * 0.016,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(right: screenWidth * 0.05),
+          padding: EdgeInsets.only(right: screenWidth * 0.04),
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.start,
             children: [

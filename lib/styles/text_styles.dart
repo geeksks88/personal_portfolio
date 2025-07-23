@@ -7,7 +7,7 @@ class TextStyles {
   TextStyles({required this.screenWidth});
 
   TextStyle get headerS => TextStyle(
-    fontSize: screenWidth * 0.013,
+    fontSize: screenWidth * 0.015,
     color: Colors.white38,
     fontFamily: "name",
   );

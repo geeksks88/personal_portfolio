@@ -58,8 +58,8 @@ class ContactDesktop extends StatelessWidget {
                       Container(
                         height: screenHeight * 0.38,
                         width: screenWidth * 0.35,
-                        // color: Colors.white,
                         decoration: BoxDecoration(
+                          // color: Colors.amber,
                           border: Border.all(
                             // width: 1,
                             // color: CustomColor.hassC,
@@ -152,7 +152,7 @@ class ContactDesktop extends StatelessWidget {
                     ],
                   ),
                   SizedBox(width: screenWidth * 0.018),
-                  Expanded(
+                  Flexible(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -194,8 +194,8 @@ class ContactDesktop extends StatelessWidget {
                         Container(
                           height: screenHeight * 0.07,
                           // width: screenWidth * 0.35,
-                          // color: Colors.white,
                           decoration: BoxDecoration(
+                            // color: Colors.white,
                             border: Border.all(
                               width: 1,
                               color: CustomColor.hassC,
@@ -227,7 +227,7 @@ class ContactDesktop extends StatelessWidget {
                         ),
                         SizedBox(height: screenHeight * 0.02),
                         Container(
-                          height: screenHeight * 0.18,
+                          height: screenHeight * 0.2,
                           // color: Colors.white,
                           decoration: BoxDecoration(
                             border: Border.all(
@@ -236,33 +236,76 @@ class ContactDesktop extends StatelessWidget {
                             ),
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(
-                              left: 20,
-                              top: 5,
-                              right: 20,
-                            ),
-                            child: TextField(
-                              // expands: true,
-                              maxLines: 5,
-                              // maxLength: 20,
-                              style: GoogleFonts.firaCode(
-                                color: Colors.white,
+                          child: Column(
+                            children: [
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                    left: 20,
+                                    top: 5,
+                                    right: 20,
+                                  ),
+                                  child: TextField(
+                                    // expands: true,
+                                    maxLines: 5,
+                                    // maxLength: 20,
+                                    style: GoogleFonts.firaCode(
+                                      color: Colors.white,
 
-                                fontSize:
-                                    screenWidth > 900
-                                        ? screenWidth * 0.01
-                                        : screenWidth * 0.015,
-                              ),
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                                enabledBorder: InputBorder.none,
-                                focusedBorder: InputBorder.none,
-                                hintText: "Your Thoughts/Advice",
+                                      fontSize:
+                                          screenWidth > 900
+                                              ? screenWidth * 0.01
+                                              : screenWidth * 0.015,
+                                    ),
+                                    decoration: InputDecoration(
+                                      border: InputBorder.none,
+                                      enabledBorder: InputBorder.none,
+                                      focusedBorder: InputBorder.none,
+                                      hintText: "Your Thoughts/Advice",
 
-                                // labelText: "Name",
+                                      // labelText: "Name",
+                                    ),
+                                  ),
+                                ),
                               ),
-                            ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: InkWell(
+                                  onTap: () {},
+                                  hoverColor: CustomColor.hassC,
+                                  splashColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  borderRadius: BorderRadius.only(
+                                    bottomLeft: Radius.circular(15),
+                                    bottomRight: Radius.circular(15),
+                                  ),
+                                  child: Container(
+                                    width: screenHeight * 0.95,
+                                    height: screenHeight * 0.05,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 1,
+                                        color: CustomColor.hassC,
+                                      ),
+                                      borderRadius: BorderRadius.only(
+                                        bottomLeft: Radius.circular(15),
+                                        bottomRight: Radius.circular(15),
+                                      ),
+                                      // color: Colors.red,
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        "S E N D",
+                                        style: GoogleFonts.firaCode(
+                                          color: CustomColor.hassC,
+                                          fontSize: screenWidth * 0.014,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
