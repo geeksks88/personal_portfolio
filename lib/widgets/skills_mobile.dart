@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portfolio_main/constants/colors.dart';
 import 'package:my_portfolio_main/styles/text_styles.dart';
@@ -43,7 +44,11 @@ class SkillsMobile extends StatelessWidget {
           child: Container(
             height: screenWidth * 0.75,
             decoration: BoxDecoration(
-              border: Border.all(width: 1.5, color: CustomColor.hassC),
+              border: Border.all(width: 1.5, color: CustomColor.hoverColor),
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(15),
+                bottomRight: Radius.circular(15),
+              ),
             ),
             child: ListView(
               padding: EdgeInsets.only(
@@ -59,13 +64,16 @@ class SkillsMobile extends StatelessWidget {
                   width: screenWidth * 0.565,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(width: 1, color: CustomColor.headingC),
+                    border: Border.all(
+                      width: 1,
+                      color: CustomColor.headingC.withOpacity(0.3),
+                    ),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(
                       top: 8.0,
-                      left: 10,
-                      right: 10,
+                      left: 20,
+                      right: 20,
                     ),
                     child: Column(
                       children: [
@@ -74,73 +82,14 @@ class SkillsMobile extends StatelessWidget {
                           "Android App Development",
                           style: TextStyles(screenWidth: screenWidth).desM,
                         ),
-                        SizedBox(height: 5),
+                        SizedBox(height: screenWidth * 0.03),
                         Text(
                           textAlign: TextAlign.center,
                           "I don’t just build apps, I Flutter through bugs — smooth as animations and sharp as Dart!",
-                          style: TextStyles(screenWidth: screenWidth).sDesc,
-                        ),
-                        SizedBox(height: screenHeight * 0.015),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8.0),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Row(
-                                  children: [
-                                    Image.asset(
-                                      "assets/flutter.png",
-                                      height: screenHeight * 0.03,
-                                    ),
-                                    SizedBox(width: 15),
-                                    Text(
-                                      "Flutter",
-                                      style:
-                                          TextStyles(
-                                            screenWidth: screenWidth * 1.8,
-                                          ).desD,
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: screenHeight * 0.009),
-                                Row(
-                                  children: [
-                                    Image.asset(
-                                      "assets/sqlite.png",
-                                      height: screenHeight * 0.03,
-                                    ),
-                                    SizedBox(width: 15),
-                                    Text(
-                                      "SQLite",
-                                      style:
-                                          TextStyles(
-                                            screenWidth: screenWidth * 1.8,
-                                          ).desD,
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: screenHeight * 0.009),
-                                Row(
-                                  children: [
-                                    Image.asset(
-                                      "assets/fireB.png",
-                                      height: screenHeight * 0.03,
-                                    ),
-                                    SizedBox(width: 15),
-                                    Text(
-                                      "Firebase",
-                                      style:
-                                          TextStyles(
-                                            screenWidth: screenWidth * 1.8,
-                                          ).desD,
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
+                          style: GoogleFonts.firaCode(
+                            fontWeight: FontWeight.w100,
+                            fontSize: screenWidth * 0.043,
+                            color: CustomColor.hassC,
                           ),
                         ),
                       ],
@@ -153,10 +102,13 @@ class SkillsMobile extends StatelessWidget {
                   width: screenWidth * 0.565,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(width: 1, color: CustomColor.headingC),
+                    border: Border.all(
+                      width: 1,
+                      color: CustomColor.headingC.withOpacity(0.3),
+                    ),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.only(top: 8),
+                    padding: EdgeInsets.only(top: 8, left: 20, right: 20),
                     child: Column(
                       children: [
                         Image.asset("assets/appleb.png", height: 45),
@@ -164,26 +116,15 @@ class SkillsMobile extends StatelessWidget {
                           "iOS App Development",
                           style: TextStyles(screenWidth: screenWidth).desM,
                         ),
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(width: 11),
-                Container(
-                  width: screenWidth * 0.565,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(width: 1, color: CustomColor.headingC),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(top: 8),
-                    child: Column(
-                      children: [
-                        Image.asset("assets/uiux.png", height: 45),
+                        SizedBox(height: screenWidth * 0.03),
                         Text(
                           textAlign: TextAlign.center,
-                          "UI/UX &\nGraphics Designing",
-                          style: TextStyles(screenWidth: screenWidth).desM,
+                          "I don’t just build apps, I compose solutions for bugs — seamless as SwiftUI and sharp as Swift!",
+                          style: GoogleFonts.firaCode(
+                            fontWeight: FontWeight.w100,
+                            fontSize: screenWidth * 0.041,
+                            color: CustomColor.hassC,
+                          ),
                         ),
                       ],
                     ),
@@ -194,10 +135,47 @@ class SkillsMobile extends StatelessWidget {
                   width: screenWidth * 0.565,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(width: 1, color: CustomColor.headingC),
+                    border: Border.all(
+                      width: 1,
+                      color: CustomColor.headingC.withOpacity(0.3),
+                    ),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.only(top: 8),
+                    padding: EdgeInsets.only(top: 8, left: 20, right: 20),
+                    child: Column(
+                      children: [
+                        Image.asset("assets/uiux.png", height: 45),
+                        Text(
+                          textAlign: TextAlign.center,
+                          "Graphics Designing",
+                          style: TextStyles(screenWidth: screenWidth).desM,
+                        ),
+                        SizedBox(height: screenWidth * 0.03),
+                        Text(
+                          textAlign: TextAlign.center,
+                          "Beyond just layouts, I illustrate ideas. My visuals are as balanced as the composition, with messaging as bold as the typography.",
+                          style: GoogleFonts.firaCode(
+                            fontWeight: FontWeight.w100,
+                            fontSize: screenWidth * 0.036,
+                            color: CustomColor.hassC,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(width: 11),
+                Container(
+                  width: screenWidth * 0.565,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      width: 1,
+                      color: CustomColor.headingC.withOpacity(0.3),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 8, left: 20, right: 20),
                     child: Column(
                       children: [
                         Image.asset("assets/CW.png", height: 45),
@@ -205,6 +183,16 @@ class SkillsMobile extends StatelessWidget {
                           textAlign: TextAlign.center,
                           "Content Writing",
                           style: TextStyles(screenWidth: screenWidth).desM,
+                        ),
+                        SizedBox(height: screenWidth * 0.03),
+                        Text(
+                          textAlign: TextAlign.center,
+                          "Far more than just sentences, I build arguments. My ideas are engineered to persuade, with language that punches.",
+                          style: GoogleFonts.firaCode(
+                            fontWeight: FontWeight.w100,
+                            fontSize: screenWidth * 0.036,
+                            color: CustomColor.hassC,
+                          ),
                         ),
                       ],
                     ),

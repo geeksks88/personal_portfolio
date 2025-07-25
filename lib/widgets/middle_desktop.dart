@@ -1,9 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
+// import 'package:lottie/lottie.dart';
 import 'package:my_portfolio_main/constants/colors.dart';
 import 'package:my_portfolio_main/styles/text_styles.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MiddleDesktop extends StatelessWidget {
   const MiddleDesktop({super.key});
@@ -64,8 +65,12 @@ class MiddleDesktop extends StatelessWidget {
               Row(
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      launchWebsite("https://drive.google.com/file/d/1x0I7zHh0YvKaYS4Z4qRejX5HssHIzlvu/view?usp=drive_link");
+                    },
+
                     style: ButtonStyle(
+                      overlayColor: WidgetStatePropertyAll(Colors.transparent),
                       backgroundColor: WidgetStateProperty.all(
                         Colors.transparent,
                       ),
@@ -149,5 +154,12 @@ class MiddleDesktop extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  void launchWebsite(String urlString) async {
+    final Uri url = Uri.parse(urlString);
+    if (!await launchUrl(url)) {
+      throw 'could not launch $url';
+    }
   }
 }

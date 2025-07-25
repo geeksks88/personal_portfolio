@@ -78,7 +78,7 @@ class ContactDesktop extends StatelessWidget {
                                 "/* Building something cool or got an opportunity? Ping me via the form or let’s link up on the socials. */",
                                 textAlign: TextAlign.justify,
                                 style: GoogleFonts.vt323(
-                                  color: Colors.white,
+                                  color: Colors.green,
                                   fontSize:
                                       screenWidth > 900
                                           ? screenWidth * 0.015
@@ -90,7 +90,7 @@ class ContactDesktop extends StatelessWidget {
                                 // mainAxisAlignment:
                                 // MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Icon(Icons.email, color: Colors.white),
+                                  Icon(Icons.email, color: Colors.yellow),
                                   SizedBox(width: screenWidth * 0.01),
                                   Text(
                                     "davasnsujal@gmail.com",
@@ -110,7 +110,7 @@ class ContactDesktop extends StatelessWidget {
                                 // mainAxisAlignment:
                                 // MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Icon(Icons.phone, color: Colors.white),
+                                  Icon(Icons.phone, color: Colors.blue),
                                   SizedBox(width: screenWidth * 0.01),
                                   Text(
                                     "9128128817",
@@ -130,7 +130,7 @@ class ContactDesktop extends StatelessWidget {
                                 // mainAxisAlignment:
                                 // MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Icon(Icons.location_on, color: Colors.white),
+                                  Icon(Icons.location_on, color: Colors.red),
                                   SizedBox(width: screenWidth * 0.01),
                                   Text(
                                     "West Bengal, India",

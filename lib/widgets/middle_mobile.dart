@@ -47,25 +47,29 @@ class MiddleMobile extends StatelessWidget {
                 "I'm Sujal Kr Singh",
                 style: TextStyles(screenWidth: screenWidth).introM,
               ),
-              AnimatedTextKit(
-                repeatForever: true,
-                animatedTexts: [
-                  TyperAnimatedText(
-                    "A Graphic Designer",
-                    speed: Duration(milliseconds: 50),
-                    textStyle: TextStyles(screenWidth: screenWidth).introM2,
-                  ),
-                  TyperAnimatedText(
-                    "An App Developer",
-                    speed: Duration(milliseconds: 50),
-                    textStyle: TextStyles(screenWidth: screenWidth).introM2,
-                  ),
-                  TyperAnimatedText(
-                    "An UI/UX Enthusiast",
-                    speed: Duration(milliseconds: 50),
-                    textStyle: TextStyles(screenWidth: screenWidth).introM2,
-                  ),
-                ],
+              Container(
+                height: 50,
+                // color: Colors.amber,
+                child: AnimatedTextKit(
+                  repeatForever: true,
+                  animatedTexts: [
+                    TyperAnimatedText(
+                      "A Graphic Designer",
+                      speed: Duration(milliseconds: 50),
+                      textStyle: TextStyles(screenWidth: screenWidth).introM2,
+                    ),
+                    TyperAnimatedText(
+                      "An App Developer",
+                      speed: Duration(milliseconds: 50),
+                      textStyle: TextStyles(screenWidth: screenWidth).introM2,
+                    ),
+                    TyperAnimatedText(
+                      "An UI/UX Enthusiast",
+                      speed: Duration(milliseconds: 50),
+                      textStyle: TextStyles(screenWidth: screenWidth).introM2,
+                    ),
+                  ],
+                ),
               ),
               // SizedBox(height: screenHeight * 0),
             ],

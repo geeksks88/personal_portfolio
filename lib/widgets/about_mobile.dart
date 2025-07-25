@@ -41,14 +41,18 @@ class AboutMobile extends StatelessWidget {
           child: Container(
             height: screenWidth * 0.75,
             decoration: BoxDecoration(
-              border: Border.all(width: 1.5, color: CustomColor.hassC),
+              border: Border.all(width: 1.5, color: CustomColor.hoverColor),
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(15),
+                bottomRight: Radius.circular(15),
+              ),
             ),
             child: Center(
               child: Padding(
                 padding: const EdgeInsets.only(
                   // top: 15,
-                  left: 15,
-                  right: 15,
+                  left: 18,
+                  right: 18,
                   // bottom: 15,
                 ),
                 child: Text(

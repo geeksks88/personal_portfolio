@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
             image: DecorationImage(
               image: AssetImage("assets/bgm.jpg"),
               fit: BoxFit.cover,
-              opacity: 0.2,
+              opacity: 0.4,
             ),
             // gradient: LinearGradient(
             //   colors: [Colors.black, Color(0xFF111111), Color(0xFF1A1A1A)],

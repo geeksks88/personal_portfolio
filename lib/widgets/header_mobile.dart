@@ -4,9 +4,11 @@ import 'package:my_portfolio_main/styles/text_styles.dart';
 // import 'package:my_portfolio_main/widgets/about_dropdown.dart';
 import 'package:my_portfolio_main/widgets/about_mobile.dart';
 import 'package:my_portfolio_main/widgets/middle_mobile.dart';
+import 'package:my_portfolio_main/widgets/projects_mobile.dart';
 // import 'package:my_portfolio_main/widgets/qoutes.dart';
 import 'package:my_portfolio_main/widgets/qoutes_mobile.dart';
 import 'package:my_portfolio_main/widgets/skills_mobile.dart';
+import 'package:my_portfolio_main/widgets/technology_mobile.dart';
 // import 'package:my_portfolio_main/widgets/middle_desktop.dart';
 
 class HeaderMobile extends StatelessWidget {
@@ -22,13 +24,14 @@ class HeaderMobile extends StatelessWidget {
         width: screenWidth * 0.85,
         height: screenHeight,
         decoration: BoxDecoration(
-          border: Border.symmetric(
-            vertical: BorderSide(
+          border: Border(
+            left: BorderSide(width: 1, color: CustomColor.hassC),
+            right: BorderSide(
               width: 0.5,
               color: CustomColor.headingC.withOpacity(0.5),
             ),
           ),
-          color: Colors.black,
+          color: Colors.black.withOpacity(0.6),
         ),
         child: ListView(
           scrollDirection: Axis.vertical,
@@ -76,13 +79,24 @@ class HeaderMobile extends StatelessWidget {
                 MiddleMobile(),
                 SizedBox(height: screenHeight * 0.1),
                 QoutesMobile(screenWidth: screenWidth),
-                SizedBox(height: screenHeight * 0.1),
+                SizedBox(height: 130),
                 AboutMobile(screenWidth: screenWidth),
                 SizedBox(height: screenHeight * 0.1),
                 SkillsMobile(
                   screenWidth: screenWidth,
                   screenHeight: screenHeight,
                 ),
+                SizedBox(height: screenHeight * 0.1),
+                TechnologyMobile(
+                  screenWidth: screenWidth,
+                  screenHeight: screenHeight,
+                ),
+                SizedBox(height: screenHeight * 0.1),
+                ProjectsMobile(
+                  screenWidth: screenWidth,
+                  screenHeight: screenHeight,
+                ),
+                SizedBox(height: screenHeight * 0.1),
               ],
             ),
           ],
