@@ -163,6 +163,7 @@ class HeaderDesktop extends StatelessWidget {
             ),
             Expanded(
               child: SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
                 scrollDirection: Axis.vertical,
                 controller: scrollController,
                 child: Column(

@@ -34,6 +34,7 @@ class HeaderMobile extends StatelessWidget {
           color: Colors.black.withOpacity(0.6),
         ),
         child: ListView(
+          physics: BouncingScrollPhysics(),
           scrollDirection: Axis.vertical,
           children: [
             Column(

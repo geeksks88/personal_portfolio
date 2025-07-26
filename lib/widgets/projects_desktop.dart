@@ -60,477 +60,562 @@ class ProjectsDesktop extends StatelessWidget {
             top: 35,
           ),
           child: SingleChildScrollView(
-            // scrollDirection: Axis.horizontal,
-            child: Container(
-              // height: screenHeight * 0.9,
-              // color: Colors.amber,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Column(
-                    // crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      screenWidth >= 900
-                          ? Container(
-                            height: screenHeight * 0.8,
-                            width: screenWidth * 0.24,
-                            // color: Colors.amber,
-                            decoration: BoxDecoration(
-                              color: CustomColor.raisedBg2,
-                              border: Border.all(
-                                width: 1.5,
-                                color: CustomColor.titleC.withOpacity(0.3),
-                              ),
-                              borderRadius: BorderRadius.circular(15),
+            controller: ScrollController(
+              initialScrollOffset: screenWidth * 0.04,
+            ),
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  // crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    screenWidth >= 900
+                        ? Container(
+                          height: screenHeight * 0.5,
+                          width: screenWidth * 0.24,
+                          // color: Colors.amber,
+                          decoration: BoxDecoration(
+                            color: CustomColor.raisedBg2,
+                            border: Border.all(
+                              width: 1.5,
+                              color: CustomColor.titleC.withOpacity(0.3),
                             ),
-                            child: Padding(
-                              padding: EdgeInsets.only(
-                                left: screenWidth * 0.025,
-                                right: screenWidth * 0.025,
-                                top: screenWidth * 0.015,
-                              ),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Expanded(
-                                        // height: screenHeight * 0.45,
-                                        // color: Colors.black,
-                                        child: Container(
-                                          height: screenHeight * 0.65,
-                                          decoration: BoxDecoration(
-                                            borderRadius: radius,
-                                          ),
-                                          child: ClipRRect(
-                                            borderRadius: radius,
-                                            child: Image.asset(
-                                              alignment: Alignment.topCenter,
-                                              "assets/Weigh.jpg",
-                                              fit: BoxFit.cover,
-                                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              left: screenWidth * 0.015,
+                              right: screenWidth * 0.015,
+                              top: screenWidth * 0.015,
+                            ),
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      // height: screenHeight * 0.45,
+                                      // color: Colors.black,
+                                      child: Container(
+                                        height: screenHeight * 0.38,
+                                        decoration: BoxDecoration(
+                                          borderRadius: radius,
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius: radius,
+                                          child: Image.asset(
+                                            alignment: Alignment(0, -0.74),
+                                            "assets/Weigh.jpg",
+
+                                            // scale: 1,
+                                            fit: BoxFit.fitHeight,
                                           ),
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                  // SizedBox(height: screenHeight * 0.01),
-                                  Row(
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: screenHeight * 0.025),
+                                SizedBox(
+                                  // color: Colors.amber,
+                                  width: screenWidth * 0.18,
+                                  child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
+                                      InkWell(
+                                        onTap: () {},
+                                        child: LineIcon.github(
+                                          size: screenWidth * 0.03,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
                                       ProjectTitle("WeighWise", 0.018),
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          IconButton(
-                                            // iconSize: screenWidth * 0.025,
-                                            // splashRadius: 50,
-                                            // splashColor: Colors.transparent,
-                                            // hoverColor: CustomColor.hoverColor,
-                                            // disabledColor: Colors.white,
-                                            tooltip: "GitHub Link",
-                                            onPressed: () {},
-                                            icon: LineIcon.github(
-                                              size: screenWidth * 0.025,
-                                            ),
-                                          ),
-                                          IconButton(
-                                            tooltip: "APK Download",
-                                            onPressed: () {},
-                                            icon: LineIcon.download(
-                                              size: screenWidth * 0.025,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          )
-                          : Container(
-                            height: screenHeight * 0.6,
-                            width: screenWidth * 0.27,
-                            // color: Colors.amber,
-                            decoration: BoxDecoration(
-                              color: CustomColor.raisedBg2,
-                              border: Border.all(
-                                width: 1.5,
-                                color: CustomColor.titleC.withOpacity(0.3),
-                              ),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.all(screenWidth * 0.015),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Expanded(
-                                        // height: screenHeight * 0.45,
-                                        // color: Colors.black,
-                                        child: Container(
-                                          height: screenHeight * 0.45,
-                                          decoration: BoxDecoration(
-                                            borderRadius: radius,
-                                          ),
-                                          child: ClipRRect(
-                                            borderRadius: radius,
-                                            child: Image.asset(
-                                              alignment: Alignment(0, -0.4),
-                                              "assets/Weigh.jpg",
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  // SizedBox(height: screenHeight * 0.015),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      ProjectTitle("WeighWise", 0.025),
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      IconButton(
-                                        // iconSize: screenWidth * 0.025,
-                                        // splashRadius: 50,
-                                        // splashColor: Colors.transparent,
-                                        // hoverColor: CustomColor.hoverColor,
-                                        // disabledColor: Colors.white,
-                                        tooltip: "GitHub Link",
-                                        onPressed: () {},
-                                        icon: LineIcon.github(
+                                      InkWell(
+                                        onTap: () {},
+                                        child: LineIcon.download(
                                           size: screenWidth * 0.03,
-                                        ),
-                                      ),
-                                      IconButton(
-                                        tooltip: "APK Download",
-                                        onPressed: () {},
-                                        icon: LineIcon.download(
-                                          size: screenWidth * 0.03,
+                                          color: Colors.grey,
                                         ),
                                       ),
                                     ],
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      SizedBox(height: screenHeight * 0.1),
-                      screenWidth >= 900
-                          ? Container(
-                            height: screenHeight * 0.8,
-                            width: screenWidth * 0.24,
-                            // color: Colors.amber,
-                            decoration: BoxDecoration(
-                              color: CustomColor.raisedBg2,
-                              border: Border.all(
-                                width: 1.5,
-                                color: CustomColor.titleC.withOpacity(0.3),
-                              ),
-                              borderRadius: BorderRadius.circular(15),
+                        )
+                        : Container(
+                          height: screenHeight * 0.5,
+                          width: screenWidth * 0.29,
+                          // color: Colors.amber,
+                          decoration: BoxDecoration(
+                            color: CustomColor.raisedBg2,
+                            border: Border.all(
+                              width: 1.5,
+                              color: CustomColor.titleC.withOpacity(0.3),
                             ),
-                            child: Padding(
-                              padding: EdgeInsets.only(
-                                left: screenWidth * 0.025,
-                                right: screenWidth * 0.025,
-                                top: screenWidth * 0.015,
-                              ),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Expanded(
-                                        // height: screenHeight * 0.45,
-                                        // color: Colors.black,
-                                        child: Container(
-                                          height: screenHeight * 0.65,
-                                          decoration: BoxDecoration(
-                                            borderRadius: radius,
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              left: screenWidth * 0.015,
+                              right: screenWidth * 0.015,
+                              top: screenWidth * 0.015,
+                            ),
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      // height: screenHeight * 0.45,
+                                      // color: Colors.black,
+                                      child: Container(
+                                        height: screenHeight * 0.37,
+                                        decoration: BoxDecoration(
+                                          borderRadius: radius,
+                                          border: Border.all(
+                                            width: 0.8,
+                                            color: Colors.white60,
                                           ),
-                                          child: ClipRRect(
-                                            borderRadius: radius,
-                                            child: Image.asset(
-                                              alignment: Alignment.topCenter,
-                                              "assets/hPTASK.jpg",
-                                              fit: BoxFit.cover,
-                                            ),
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius: radius,
+                                          child: Image.asset(
+                                            alignment: Alignment(0, -0.74),
+                                            "assets/Weigh.jpg",
+                                            fit: BoxFit.cover,
                                           ),
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                  Row(
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: screenHeight * 0.01),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [ProjectTitle("WeighWise", 0.022)],
+                                ),
+                                SizedBox(height: 5),
+                                SizedBox(
+                                  width: screenWidth * 0.15,
+                                  child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      ProjectTitle("WorkIT", 0.02),
-                                      Row(
-                                        children: [
-                                          IconButton(
-                                            // iconSize: screenWidth * 0.025,
-                                            // splashRadius: 50,
-                                            // splashColor: Colors.transparent,
-                                            // hoverColor: CustomColor.hoverColor,
-                                            // disabledColor: Colors.white,
-                                            tooltip: "GitHub Link",
-                                            onPressed: () {},
-                                            icon: LineIcon.github(
-                                              size: screenWidth * 0.025,
-                                            ),
-                                          ),
-                                          IconButton(
-                                            tooltip: "APK Download",
-                                            onPressed: () {},
-                                            icon: LineIcon.download(
-                                              size: screenWidth * 0.025,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          )
-                          : Container(
-                            height: screenHeight * 0.6,
-                            width: screenWidth * 0.27,
-                            // color: Colors.amber,
-                            decoration: BoxDecoration(
-                              color: CustomColor.raisedBg2,
-                              border: Border.all(
-                                width: 1.5,
-                                color: CustomColor.titleC.withOpacity(0.3),
-                              ),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.all(screenWidth * 0.017),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Expanded(
-                                        // height: screenHeight * 0.45,
-                                        // color: Colors.black,
-                                        child: Container(
-                                          height: screenHeight * 0.45,
-                                          decoration: BoxDecoration(
-                                            borderRadius: radius,
-                                          ),
-                                          child: ClipRRect(
-                                            borderRadius: radius,
-                                            child: Image.asset(
-                                              alignment: Alignment(0, -0.4),
-                                              "assets/hPTASK.jpg",
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [ProjectTitle("WorkIT", 0.025)],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      IconButton(
-                                        // iconSize: screenWidth * 0.025,
-                                        // splashRadius: 50,
-                                        // splashColor: Colors.transparent,
-                                        // hoverColor: CustomColor.hoverColor,
-                                        // disabledColor: Colors.white,
-                                        tooltip: "GitHub Link",
-                                        onPressed: () {},
-                                        icon: LineIcon.github(
+                                      InkWell(
+                                        onTap: () {},
+                                        child: LineIcon.github(
                                           size: screenWidth * 0.03,
+                                          color: Colors.grey,
                                         ),
                                       ),
-                                      IconButton(
-                                        tooltip: "APK Download",
-                                        onPressed: () {},
-                                        icon: LineIcon.download(
+                                      InkWell(
+                                        onTap: () {},
+                                        child: LineIcon.download(
                                           size: screenWidth * 0.03,
+                                          color: Colors.grey,
                                         ),
                                       ),
                                     ],
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      screenWidth >= 900
-                          ? Container(
-                            height: screenHeight * 0.8,
-                            width: screenWidth * 0.24,
+                        ),
+                  ],
+                ),
+                SizedBox(width: screenWidth * 0.02),
+                Column(
+                  children: [
+                    SizedBox(height: screenHeight * 0.1),
+                    screenWidth >= 900
+                        ? Container(
+                          height: screenHeight * 0.5,
+                          width: screenWidth * 0.25,
+                          // color: Colors.amber,
+                          decoration: BoxDecoration(
                             // color: Colors.amber,
-                            decoration: BoxDecoration(
-                              color: CustomColor.raisedBg2,
-                              border: Border.all(
-                                width: 1.5,
-                                color: CustomColor.titleC.withOpacity(0.3),
-                              ),
-                              borderRadius: BorderRadius.circular(15),
+                            border: Border.all(
+                              width: 1.5,
+                              color: CustomColor.titleC.withOpacity(0.3),
                             ),
-                            child: Padding(
-                              padding: EdgeInsets.only(
-                                left: screenWidth * 0.025,
-                                right: screenWidth * 0.025,
-                                top: screenWidth * 0.015,
-                              ),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Expanded(
-                                        // height: screenHeight * 0.45,
-                                        // color: Colors.black,
-                                        child: Container(
-                                          height: screenHeight * 0.65,
-                                          decoration: BoxDecoration(
-                                            borderRadius: radius,
-                                          ),
-                                          child: ClipRRect(
-                                            borderRadius: radius,
-                                            child: Image.asset(
-                                              alignment: Alignment.topCenter,
-                                              "assets/breeze.jpg",
-                                              fit: BoxFit.cover,
-                                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              left: screenWidth * 0.025,
+                              right: screenWidth * 0.025,
+                              top: screenWidth * 0.015,
+                            ),
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      // height: screenHeight * 0.45,
+                                      // color: Colors.black,
+                                      child: Container(
+                                        height: screenHeight * 0.38,
+                                        decoration: BoxDecoration(
+                                          // color: Colors.black,
+                                          borderRadius: radius,
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius: radius,
+                                          child: Image.asset(
+                                            alignment: Alignment(0, -0.74),
+                                            "assets/hPTASK.jpg",
+                                            fit: BoxFit.contain,
                                           ),
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                  Row(
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: screenHeight * 0.025),
+                                SizedBox(
+                                  // color: Colors.amber,
+                                  width: screenWidth * 0.18,
+                                  child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      ProjectTitle("Breeze", 0.02),
-                                      Row(
-                                        children: [
-                                          IconButton(
-                                            // iconSize: screenWidth * 0.025,
-                                            // splashRadius: 50,
-                                            // splashColor: Colors.transparent,
-                                            // hoverColor: CustomColor.hoverColor,
-                                            // disabledColor: Colors.white,
-                                            tooltip: "GitHub Link",
-                                            onPressed: () {},
-                                            icon: LineIcon.github(
-                                              size: screenWidth * 0.025,
-                                            ),
-                                          ),
-                                          IconButton(
-                                            tooltip: "APK Download",
-                                            onPressed: () {},
-                                            icon: LineIcon.download(
-                                              size: screenWidth * 0.025,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          )
-                          : Container(
-                            height: screenHeight * 0.6,
-                            width: screenWidth * 0.27,
-                            // color: Colors.amber,
-                            decoration: BoxDecoration(
-                              color: CustomColor.raisedBg2,
-                              border: Border.all(
-                                width: 1.5,
-                                color: CustomColor.titleC.withOpacity(0.3),
-                              ),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.all(screenWidth * 0.015),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Expanded(
-                                        // height: screenHeight * 0.45,
-                                        // color: Colors.black,
-                                        child: Container(
-                                          height: screenHeight * 0.45,
-                                          decoration: BoxDecoration(
-                                            borderRadius: radius,
-                                          ),
-                                          child: ClipRRect(
-                                            borderRadius: radius,
-                                            child: Image.asset(
-                                              alignment: Alignment(0, -0.4),
-                                              "assets/breeze.jpg",
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [ProjectTitle("Breeze", 0.025)],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      IconButton(
-                                        // iconSize: screenWidth * 0.025,
-                                        // splashRadius: 50,
-                                        // splashColor: Colors.transparent,
-                                        // hoverColor: CustomColor.hoverColor,
-                                        // disabledColor: Colors.white,
-                                        tooltip: "GitHub Link",
-                                        onPressed: () {},
-                                        icon: LineIcon.github(
+                                      InkWell(
+                                        onTap: () {},
+                                        child: LineIcon.github(
                                           size: screenWidth * 0.03,
+                                          color: Colors.grey,
                                         ),
                                       ),
-                                      IconButton(
-                                        tooltip: "APK Download",
-                                        onPressed: () {},
-                                        icon: LineIcon.download(
+                                      ProjectTitle("WorkIT", 0.018),
+                                      InkWell(
+                                        onTap: () {},
+                                        child: LineIcon.download(
                                           size: screenWidth * 0.03,
+                                          color: Colors.grey,
                                         ),
                                       ),
                                     ],
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
-                    ],
-                  ),
-                ],
-              ),
+                        )
+                        // : Container(
+                        //   height: screenHeight * 0.6,
+                        //   width: screenWidth * 0.27,
+                        //   // color: Colors.amber,
+                        //   decoration: BoxDecoration(
+                        //     color: CustomColor.raisedBg2,
+                        //     border: Border.all(
+                        //       width: 1.5,
+                        //       color: CustomColor.titleC.withOpacity(0.3),
+                        //     ),
+                        //     borderRadius: BorderRadius.circular(15),
+                        //   ),
+                        //   child: Padding(
+                        //     padding: EdgeInsets.all(screenWidth * 0.017),
+                        //     child: Column(
+                        //       children: [
+                        //         Row(
+                        //           children: [
+                        //             Expanded(
+                        //               // height: screenHeight * 0.45,
+                        //               // color: Colors.black,
+                        //               child: Container(
+                        //                 height: screenHeight * 0.45,
+                        //                 decoration: BoxDecoration(
+                        //                   borderRadius: radius,
+                        //                 ),
+                        //                 child: ClipRRect(
+                        //                   borderRadius: radius,
+                        //                   child: Image.asset(
+                        //                     alignment: Alignment(0, -0.4),
+                        //                     "assets/hPTASK.jpg",
+                        //                     fit: BoxFit.cover,
+                        //                   ),
+                        //                 ),
+                        //               ),
+                        //             ),
+                        //           ],
+                        //         ),
+                        //         Row(
+                        //           mainAxisAlignment: MainAxisAlignment.center,
+                        //           children: [ProjectTitle("WorkIT", 0.025)],
+                        //         ),
+                        //         Row(
+                        //           mainAxisAlignment: MainAxisAlignment.center,
+                        //           children: [
+                        //             IconButton(
+                        //               // iconSize: screenWidth * 0.025,
+                        //               // splashRadius: 50,
+                        //               // splashColor: Colors.transparent,
+                        //               // hoverColor: CustomColor.hoverColor,
+                        //               // disabledColor: Colors.white,
+                        //               tooltip: "GitHub Link",
+                        //               onPressed: () {},
+                        //               icon: LineIcon.github(
+                        //                 size: screenWidth * 0.03,
+                        //               ),
+                        //             ),
+                        //             IconButton(
+                        //               tooltip: "APK Download",
+                        //               onPressed: () {},
+                        //               icon: LineIcon.download(
+                        //                 size: screenWidth * 0.03,
+                        //               ),
+                        //             ),
+                        //           ],
+                        //         ),
+                        //       ],
+                        //     ),
+                        //   ),
+                        // ),
+                        : Container(
+                          height: screenHeight * 0.5,
+                          width: screenWidth * 0.29,
+                          // color: Colors.amber,
+                          decoration: BoxDecoration(
+                            color: CustomColor.raisedBg2,
+                            border: Border.all(
+                              width: 1.5,
+                              color: CustomColor.titleC.withOpacity(0.3),
+                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              left: screenWidth * 0.015,
+                              right: screenWidth * 0.015,
+                              top: screenWidth * 0.015,
+                            ),
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      // height: screenHeight * 0.45,
+                                      // color: Colors.black,
+                                      child: Container(
+                                        height: screenHeight * 0.37,
+                                        decoration: BoxDecoration(
+                                          borderRadius: radius,
+                                          border: Border.all(
+                                            width: 0.8,
+                                            color: Colors.white60,
+                                          ),
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius: radius,
+                                          child: Image.asset(
+                                            alignment: Alignment(0, -0.74),
+                                            "assets/hPTASK.jpg",
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: screenHeight * 0.01),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [ProjectTitle("WorkIT", 0.024)],
+                                ),
+                                SizedBox(height: 5),
+                                SizedBox(
+                                  width: screenWidth * 0.17,
+                                  // color: Colors.white,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      InkWell(
+                                        onTap: () {},
+                                        child: LineIcon.github(
+                                          size: screenWidth * 0.03,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                      InkWell(
+                                        onTap: () {},
+                                        child: LineIcon.download(
+                                          size: screenWidth * 0.03,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                  ],
+                ),
+                SizedBox(width: screenWidth * 0.02),
+                Column(
+                  children: [
+                    screenWidth >= 900
+                        ? Container(
+                          height: screenHeight * 0.5,
+                          width: screenWidth * 0.24,
+                          // color: Colors.amber,
+                          decoration: BoxDecoration(
+                            color: CustomColor.raisedBg2,
+                            border: Border.all(
+                              width: 1.5,
+                              color: CustomColor.titleC.withOpacity(0.3),
+                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              left: screenWidth * 0.025,
+                              right: screenWidth * 0.025,
+                              top: screenWidth * 0.015,
+                            ),
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      // height: screenHeight * 0.45,
+                                      // color: Colors.black,
+                                      child: Container(
+                                        height: screenHeight * 0.38,
+                                        decoration: BoxDecoration(
+                                          borderRadius: radius,
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius: radius,
+                                          child: Image.asset(
+                                            alignment: Alignment(0, -0.74),
+                                            "assets/breeze.jpg",
+                                            fit: BoxFit.fitHeight,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: screenHeight * 0.025),
+                                SizedBox(
+                                  // color: Colors.amber,
+                                  width: screenWidth * 0.18,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      InkWell(
+                                        onTap: () {},
+                                        child: LineIcon.github(
+                                          size: screenWidth * 0.03,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                      ProjectTitle("Breeze", 0.018),
+                                      InkWell(
+                                        onTap: () {},
+                                        child: LineIcon.download(
+                                          size: screenWidth * 0.03,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        )
+                        : Container(
+                          height: screenHeight * 0.5,
+                          width: screenWidth * 0.29,
+                          // color: Colors.amber,
+                          decoration: BoxDecoration(
+                            color: CustomColor.raisedBg2,
+                            border: Border.all(
+                              width: 1.5,
+                              color: CustomColor.titleC.withOpacity(0.3),
+                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              left: screenWidth * 0.015,
+                              right: screenWidth * 0.015,
+                              top: screenWidth * 0.015,
+                            ),
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      // height: screenHeight * 0.45,
+                                      // color: Colors.black,
+                                      child: Container(
+                                        height: screenHeight * 0.37,
+                                        decoration: BoxDecoration(
+                                          borderRadius: radius,
+                                          border: Border.all(
+                                            width: 0.8,
+                                            color: Colors.white60,
+                                          ),
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius: radius,
+                                          child: Image.asset(
+                                            alignment: Alignment(0, -0.74),
+                                            "assets/breeze.jpg",
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: screenHeight * 0.01),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [ProjectTitle("Breeze", 0.024)],
+                                ),
+                                SizedBox(height: 5),
+                                SizedBox(
+                                  // color: Colors.white,
+                                  width: screenWidth * 0.15,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      InkWell(
+                                        onTap: () {},
+                                        child: LineIcon.github(
+                                          size: screenWidth * 0.03,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                      InkWell(
+                                        onTap: () {},
+                                        child: LineIcon.download(
+                                          size: screenWidth * 0.03,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                  ],
+                ),
+              ],
             ),
           ),
         ),
