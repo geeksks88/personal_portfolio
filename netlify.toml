@@ -1,5 +1,5 @@
 [build]
-  base    = "MY_PORTFOLIO_MAIN" # <-- ADD THIS LINE
+  base    = "my_portfolio_main" # <-- ADD THIS LINE
   command = "flutter build web"
   publish = "build/web"
 
