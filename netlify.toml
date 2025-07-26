@@ -1,4 +1,6 @@
 [build]
+  base    = "MY_PORTFOLIO_MAIN" # <-- ADD THIS LINE
+  command = "flutter build web"
   publish = "build/web"
 
 [[redirects]]
