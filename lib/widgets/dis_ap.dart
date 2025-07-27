@@ -2,15 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio_main/constants/colors.dart';
 
-class DisAp extends StatefulWidget {
+class DisAp extends StatelessWidget {
   final double screenWidth;
   const DisAp({super.key, required this.screenWidth});
 
-  @override
-  State<DisAp> createState() => _DisApState();
-}
-
-class _DisApState extends State<DisAp> {
   // final double screenWidth=screenWidth;
   @override
   Widget build(BuildContext context) {
@@ -18,11 +13,11 @@ class _DisApState extends State<DisAp> {
       alignment: AlignmentDirectional.center,
       children: [
         Container(
-          width: widget.screenWidth * 0.5,
-          height: widget.screenWidth * 0.37,
+          width: screenWidth * 0.5,
+          height: screenWidth * 0.37,
           // color: Colors.amber,
           child: Padding(
-            padding: EdgeInsets.only(bottom: widget.screenWidth * 0.02),
+            padding: EdgeInsets.only(bottom: screenWidth * 0.02),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -31,8 +26,8 @@ class _DisApState extends State<DisAp> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      height: widget.screenWidth * 0.11,
-                      width: widget.screenWidth * 0.24,
+                      height: screenWidth * 0.11,
+                      width: screenWidth * 0.24,
                       decoration: BoxDecoration(
                         color: CustomColor.raisedBg2,
                         borderRadius: BorderRadius.circular(5),
@@ -49,7 +44,7 @@ class _DisApState extends State<DisAp> {
                             textAlign: TextAlign.center,
                             style: GoogleFonts.firaCode(
                               fontWeight: FontWeight.w300,
-                              fontSize: widget.screenWidth * 0.012,
+                              fontSize: screenWidth * 0.012,
                               color: CustomColor.titleC,
                             ),
                           ),
@@ -57,8 +52,8 @@ class _DisApState extends State<DisAp> {
                       ),
                     ),
                     Container(
-                      height: widget.screenWidth * 0.11,
-                      width: widget.screenWidth * 0.24,
+                      height: screenWidth * 0.11,
+                      width: screenWidth * 0.24,
                       decoration: BoxDecoration(
                         color: CustomColor.raisedBg2,
                         borderRadius: BorderRadius.circular(5),
@@ -75,7 +70,7 @@ class _DisApState extends State<DisAp> {
                             textAlign: TextAlign.center,
                             style: GoogleFonts.firaCode(
                               fontWeight: FontWeight.w300,
-                              fontSize: widget.screenWidth * 0.012,
+                              fontSize: screenWidth * 0.012,
                               color: CustomColor.titleC,
                             ),
                           ),
@@ -84,15 +79,15 @@ class _DisApState extends State<DisAp> {
                     ),
                   ],
                 ),
-                SizedBox(height: widget.screenWidth * 0.02),
+                SizedBox(height: screenWidth * 0.02),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      height: widget.screenWidth * 0.11,
-                      width: widget.screenWidth * 0.24,
+                      height: screenWidth * 0.11,
+                      width: screenWidth * 0.24,
                       decoration: BoxDecoration(
                         color: CustomColor.raisedBg2,
                         borderRadius: BorderRadius.circular(5),
@@ -109,7 +104,7 @@ class _DisApState extends State<DisAp> {
                             textAlign: TextAlign.center,
                             style: GoogleFonts.firaCode(
                               fontWeight: FontWeight.w300,
-                              fontSize: widget.screenWidth * 0.012,
+                              fontSize: screenWidth * 0.012,
                               color: CustomColor.titleC,
                             ),
                           ),
@@ -117,8 +112,8 @@ class _DisApState extends State<DisAp> {
                       ),
                     ),
                     Container(
-                      height: widget.screenWidth * 0.11,
-                      width: widget.screenWidth * 0.24,
+                      height: screenWidth * 0.11,
+                      width: screenWidth * 0.24,
                       decoration: BoxDecoration(
                         color: CustomColor.raisedBg2,
                         borderRadius: BorderRadius.circular(5),
@@ -135,7 +130,7 @@ class _DisApState extends State<DisAp> {
                             textAlign: TextAlign.center,
                             style: GoogleFonts.firaCode(
                               fontWeight: FontWeight.w300,
-                              fontSize: widget.screenWidth * 0.012,
+                              fontSize: screenWidth * 0.012,
                               color: CustomColor.titleC,
                             ),
                           ),

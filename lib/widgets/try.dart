@@ -3,17 +3,10 @@ import 'package:circle_list/circle_list.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio_main/constants/colors.dart';
 
-class HoverRotatingCircleList extends StatefulWidget {
+class HoverRotatingCircleList extends StatelessWidget {
   const HoverRotatingCircleList({super.key});
 
-  @override
-  State<HoverRotatingCircleList> createState() =>
-      _HoverRotatingCircleListState();
-}
-
-class _HoverRotatingCircleListState extends State<HoverRotatingCircleList> {
   // bool _isHovered = false;
-
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
