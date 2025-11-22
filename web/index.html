@@ -1,10 +1,9 @@
 <body>
   <script>
     var scriptLoaded = false;
+
     function loadMainDartJs() {
-      if (scriptLoaded) {
-        return;
-      }
+      if (scriptLoaded) return;
       scriptLoaded = true;
       var scriptTag = document.createElement('script');
       scriptTag.src = 'main.dart.js';
@@ -12,38 +11,22 @@
       document.body.append(scriptTag);
     }
 
+    // 🔹 Unregister any existing service workers from older builds
     if ('serviceWorker' in navigator) {
-      // Service workers are supported. Use them.
-      window.addEventListener('load', function () {
-        // The `?v={{flutter_service_worker_version}}` part is a template token that
-        // will be replaced by the build process with the correct version.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v={{flutter_service_worker_version}}';
-        navigator.serviceWorker.register(serviceWorkerUrl)
-          .then((reg) => {
-            function waitForActivation(serviceWorker) {
-              serviceWorker.addEventListener('statechange', () => {
-                if (serviceWorker.state == 'activated') {
-                  console.log('Installed new service worker.');
-                  loadMainDartJs();
-                }
-              });
-            }
-            if (!reg.active && (reg.installing || reg.waiting)) {
-              waitForActivation(reg.installing ?? reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith('{{flutter_service_worker_version}}')) {
-              reg.update().then((reg) => {
-                waitForActivation(reg.installing ?? reg.waiting);
-              });
-            } else {
-              // The service worker is already active.
-              console.log('Loading app from service worker.');
-              loadMainDartJs();
-            }
-          });
-      });
-    } else {
-      // Service workers are not supported. Just drop the <script> tag.
-      loadMainDartJs();
+      navigator.serviceWorker.getRegistrations()
+        .then(function (regs) {
+          for (let reg of regs) {
+            reg.unregister();
+          }
+        })
+        .catch(function (e) {
+          console.warn('SW unregister failed', e);
+        });
     }
+
+    // 🔹 Always load the app directly on window load
+    window.addEventListener('load', function () {
+      loadMainDartJs();
+    });
   </script>
 </body>
