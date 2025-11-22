@@ -1,7 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import 'package:lottie/lottie.dart';
+import 'package:lottie/lottie.dart';
 import 'package:my_portfolio_main/constants/colors.dart';
 import 'package:my_portfolio_main/styles/text_styles.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -28,9 +28,14 @@ class MiddleDesktop extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "Hii,",
-                  style: TextStyles(screenWidth: screenWidth * 1.2).introS,
+                Row(
+                  children: [
+                    Text(
+                      "Hii,",
+                      style: TextStyles(screenWidth: screenWidth * 1.2).introS,
+                    ),
+                    Lottie.asset("assets/animations/namaste.json", width: 100),
+                  ],
                 ),
                 Text(
                   "I'm Sujal",

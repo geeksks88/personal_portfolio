@@ -127,11 +127,11 @@ class SkillsDesktop extends StatelessWidget {
                       width: screenWidth * 0.25,
                       // color: Colors.white,
                       decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage("oss4.png"),
-                          fit: BoxFit.cover,
-                          opacity: 0.08,
-                        ),
+                        // image: DecorationImage(
+                        //   image: AssetImage("oss4.png"),
+                        //   fit: BoxFit.cover,
+                        //   opacity: 0.08,
+                        // ),
                         // boxShadow: [
                         //   BoxShadow(
                         //     color: Colors.redAccent,
