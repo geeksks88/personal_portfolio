@@ -3,6 +3,7 @@ import 'package:my_portfolio_main/constants/colors.dart';
 import 'package:my_portfolio_main/styles/text_styles.dart';
 // import 'package:my_portfolio_main/widgets/about_dropdown.dart';
 import 'package:my_portfolio_main/widgets/about_mobile.dart';
+import 'package:my_portfolio_main/widgets/contact_mobile.dart';
 import 'package:my_portfolio_main/widgets/middle_mobile.dart';
 import 'package:my_portfolio_main/widgets/projects_mobile.dart';
 // import 'package:my_portfolio_main/widgets/qoutes.dart';
@@ -98,6 +99,11 @@ class HeaderMobile extends StatelessWidget {
                   screenHeight: screenHeight,
                 ),
                 SizedBox(height: screenHeight * 0.1),
+
+                ContactMobile(
+                  screenWidth: screenWidth,
+                  screenHeight: screenHeight,
+                ),
               ],
             ),
           ],

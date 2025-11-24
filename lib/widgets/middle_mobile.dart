@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:my_portfolio_main/constants/colors.dart';
 import 'package:my_portfolio_main/styles/text_styles.dart';
 
@@ -37,12 +38,24 @@ class MiddleMobile extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 15),
+          SizedBox(height: screenWidth * 0.07),
           Column(
-            spacing: 0,
+            // spacing: 0,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text("Hii,", style: TextStyles(screenWidth: screenWidth).introM),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Hii,",
+                    style: TextStyles(screenWidth: screenWidth).introM,
+                  ),
+                  Lottie.asset(
+                    "assets/animations/namaste.json",
+                    width: screenWidth * 0.09,
+                  ),
+                ],
+              ),
               Text(
                 "I'm Sujal Kr Singh",
                 style: TextStyles(screenWidth: screenWidth).introM,
