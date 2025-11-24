@@ -34,7 +34,10 @@ class MiddleDesktop extends StatelessWidget {
                       "Hii,",
                       style: TextStyles(screenWidth: screenWidth * 1.2).introS,
                     ),
-                    Lottie.asset("assets/animations/namaste.json", width: 100),
+                    Lottie.asset(
+                      "assets/animations/namaste.json",
+                      width: screenWidth * 0.05,
+                    ),
                   ],
                 ),
                 Text(
