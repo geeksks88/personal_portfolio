@@ -4,6 +4,8 @@ import 'package:my_portfolio_main/styles/text_styles.dart';
 // import 'package:my_portfolio_main/widgets/about_dropdown.dart';
 import 'package:my_portfolio_main/widgets/about_mobile.dart';
 import 'package:my_portfolio_main/widgets/contact_mobile.dart';
+import 'package:my_portfolio_main/widgets/footer_desktop.dart';
+import 'package:my_portfolio_main/widgets/footer_mobile.dart';
 import 'package:my_portfolio_main/widgets/middle_mobile.dart';
 import 'package:my_portfolio_main/widgets/projects_mobile.dart';
 // import 'package:my_portfolio_main/widgets/qoutes.dart';
@@ -35,7 +37,7 @@ class HeaderMobile extends StatelessWidget {
           color: Colors.black.withOpacity(0.6),
         ),
         child: ListView(
-          physics: BouncingScrollPhysics(),
+          // physics: BouncingScrollPhysics(),
           scrollDirection: Axis.vertical,
           children: [
             Column(
@@ -103,6 +105,10 @@ class HeaderMobile extends StatelessWidget {
                 ContactMobile(
                   screenWidth: screenWidth,
                   screenHeight: screenHeight,
+                ),
+                FooterMobile(
+                  screenHeight: screenHeight,
+                  screenWidth: screenWidth,
                 ),
               ],
             ),
